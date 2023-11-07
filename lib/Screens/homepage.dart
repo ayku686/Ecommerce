@@ -43,8 +43,8 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: Column(
                         children: [
-                          const SizedBox(
-                            height: 60,
+                          SizedBox(
+                            height: 60*hscale,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                               Text('ECOMMERCE',
                                   style: GoogleFonts.mukta(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 30,
+                                      fontSize: 30*hscale,
                                       color:
                                           const Color.fromRGBO(28, 28, 29, 1))),
                               IconButton(
@@ -68,11 +68,11 @@ class _HomePageState extends State<HomePage> {
                                   ))
                             ],
                           ),
-                          const SizedBox(
-                            height: 15,
+                          SizedBox(
+                            height: 15*hscale,
                           ),
                           Container(
-                            height: 65,
+                            height: 65*hscale,
                             decoration: const BoxDecoration(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(30)),
@@ -86,8 +86,8 @@ class _HomePageState extends State<HomePage> {
                                     Padding(
                                       padding: const EdgeInsets.only(left: 8.0),
                                       child: Container(
-                                        height: 50,
-                                        width: 50,
+                                        height: 50*hscale,
+                                        width: 50*wscale,
                                         decoration: const BoxDecoration(
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(50)),
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                                               Color.fromRGBO(222, 126, 71, 1),
                                         ),
                                         child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
+                                          padding: EdgeInsets.symmetric(vertical: 8.0*hscale,horizontal: 8*wscale),
                                           child: Image.asset(
                                               'assets/images/location.png',
                                               color: Colors.white),
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: EdgeInsets.symmetric(vertical: 8.0*hscale,horizontal: 8*wscale),
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -111,14 +111,14 @@ class _HomePageState extends State<HomePage> {
                                           Text(
                                             'Send to',
                                             style: GoogleFonts.notoSerif(
-                                              fontSize: 16,
+                                              fontSize: 16*hscale,
                                               color: Colors.black54,
                                             ),
                                           ),
                                           Text(
                                             'New Delhi, India',
                                             style: GoogleFonts.karla(
-                                                fontSize: 18,
+                                                fontSize: 18*hscale,
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.w700,
                                                 letterSpacing: -1),
@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.symmetric(vertical: 8.0*hscale,horizontal: 8*wscale),
                                   child: Container(
                                     width: 110,
                                     height: 65,
@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                                       style: GoogleFonts.mukta(
                                           color: Colors.white,
                                           fontWeight: FontWeight.w800,
-                                          fontSize: 18),
+                                          fontSize: 18*hscale),
                                     ),
                                   ),
                                 )
@@ -249,7 +249,7 @@ class _HomePageState extends State<HomePage> {
                                             MaterialPageRoute(builder: (context) => ProductDetails(product: prod[index])));
                                       },
                                       child: Container(
-                                        height:140,
+                                        height:140*hscale,
                                           width: double.infinity,
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(8)
@@ -259,7 +259,7 @@ class _HomePageState extends State<HomePage> {
                                     SizedBox(height: 5*hscale),
                                     Text(prod[index].title,
                                         style: GoogleFonts.robotoCondensed(
-                                      fontSize: 18,
+                                      fontSize: 18*hscale,
                                           fontWeight: FontWeight.w600,
                                     ),
                                     maxLines: 1),
